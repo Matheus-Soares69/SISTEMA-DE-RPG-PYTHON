@@ -111,3 +111,4 @@ link.ataque_circular(dumbledore)
 dumbledore.lancar_magia(tigresa)
 tigresa.arranhada(uriel)
 uriel.rezar(link)
+#teste acode
