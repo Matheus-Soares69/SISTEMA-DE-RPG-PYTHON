@@ -1,3 +1,13 @@
+import time
+
+texto = "O heroi hyliano ergueu sua espada mestra e deu com tudo na cabeça do grande mago Dumbledore!"
+
+for letra in texto:
+    print(letra, end="", flush=True)
+    time.sleep(0.05)
+
+print()
+
 
 class Personagem:
     def __init__(self,nome, classe, vida, dano):
@@ -29,31 +39,31 @@ class Mago(Personagem):
   
   
 class Heroi(Personagem):
-    def __init__(self, nome, classe, vida, dano, força):
+    def __init__(self, nome, classe, vida, dano, forca):
         super().__init__(nome, "Heroi", vida, dano)
-        self.força = força
+        self.forca = forca
         
     def ataque_circular(self, alvo):
-        if self.força >= 75:
+        if self.forca >= 75:
             print("HYAAAAAA")
-            self.força -= 75
-            print(f"Forca restante {self.força}")
+            self.forca -= 75
+            print(f"Forca restante {self.forca}")
         else:
             print("Força insuficiente")
         
         
 class Paladino(Personagem):
-    def __init__(self, nome, classe, vida, dano, mana, fé):
+    def __init__(self, nome, classe, vida, dano, mana, fe):
         super().__init__(nome, "Paladino", vida, dano)
         self.mana = mana
-        self.fé = fé
+        self.fe = fe
     
     def rezar(self, alvo):
         self.alvo = alvo
-        if self.fé >= 150:
+        if self.fe >= 150:
             print("Que Deus tenha misericórdia de tua alma!!")
-            self.fé -= 150
-            print(f"Fé restante {self.fé}")
+            self.fe -= 150
+            print(f"Fé restante {self.fe}")
         else:
             print("Fé insuficiente")
     
@@ -81,7 +91,7 @@ tigresa = Nekomata("Tigresa", "Nekomata", 220, 50, 300, "Kung-Fu")
 
 
 
-link.atacar(dumbledore)
+link.ataque_circular(dumbledore)
 dumbledore.atacar(tigresa)
 tigresa.atacar(uriel)
 uriel.atacar(link)
